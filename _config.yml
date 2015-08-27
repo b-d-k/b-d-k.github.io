@@ -14,3 +14,8 @@ media: "images"
 
 # Build settings
 markdown: kramdown
+
+
+prose:
+  media: "images"
+  
