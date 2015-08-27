@@ -10,9 +10,9 @@ date: 2015-08-27 16:15:56
 
 ## Great news
 
-lorem ipsum
+lorem ipsum dolor
 
-![enter image description here](images/scott.jpg "this is scott")
+![enter image description here](/images/scott.jpg "this is scott")
 
 ----------
 
