@@ -1,9 +1,10 @@
 ---
-published: true
+published: false
 layout: post
 title: A very new test post
-date: 2015-08-27 16:15:56
+date: {}
 ---
+
 
 
 
