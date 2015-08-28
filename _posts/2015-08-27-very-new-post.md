@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: A very new test post
 date: {}
