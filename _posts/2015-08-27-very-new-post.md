@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: A very new test post
-date: {}
+date: 2015-08-27 16:00:00
 ---
 
 
