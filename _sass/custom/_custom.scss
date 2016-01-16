@@ -1,0 +1,253 @@
+//
+// <LALA Project name>
+// =============================================================================
+
+/* == RESETS == */
+h1, h2, h3{
+  margin-top: 0;
+}
+
+
+.img-shadow{
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+body{
+  //background-color: #c4c4c4;
+  background-color: lighten( #c4c4c4, 15% )
+}
+
+
+.page-wrapper{
+  @include clearfix();
+  width: 100%;
+  max-width: 1100px;
+  background-color: #fff;
+  box-shadow: 7px 0px 5px -4px rgba(0,0,0,0.27);
+  
+
+  // making sure it's the page header
+  > header{
+    @include clearfix();
+    padding: 22px 0 8px;
+    border-bottom: 1px solid #949494;
+
+    h1{
+      @include column(12/12);
+      font-size: 1.4375em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: getColor(blue, base);
+      
+      a{
+        color: getColor(blue, base);
+      }
+      span{
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        color: getColor(text, primary);
+        text-transform: initial;
+        vertical-align: text-bottom;
+      }
+
+      // -- 667px breakpoint for iPhone 6 --
+      @media only screen and (min-width : 667px){
+        span{
+          margin-left: 15px;
+          display: inline;
+        }
+      }
+
+      @media only screen and (min-width : $bp-small){
+        font-size: 1.5em; //24px
+      }
+
+      @media only screen and (min-width : $bp-medium){
+        padding-left: 30px;
+        font-size: 1.625em; // 26px
+
+        // ** Name is now about 177px wide
+      }
+    } // h1
+
+
+    @media only screen and (min-width : $bp-small){
+      padding: 43px 0 8px;
+    }
+
+  } // .header
+}
+
+
+nav{
+  @include clearfix();
+  margin-bottom: 20px;
+  padding-top: 25px;
+  display: block;
+  border-top: 4px solid #c4c4c4;
+
+  ul{
+    @include column(1/1);
+    padding-bottom: 3px;
+    list-style-type: none;
+    border-bottom: 2px solid #ddd;
+
+    li{
+      margin-left: 10px;
+      float: left;
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-size: 1.125em; //18px
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      a{
+        color: lighten(getColor(text, primary), 10%);
+
+        &:hover{
+          color: #eb7d12;
+        }
+      }
+
+      #portfolio &.portfolio a,
+      #about &.about a{
+        font-weight: 800;
+        text-transform: uppercase;
+        color: getColor(blue, base);
+      }
+
+
+    }
+  }
+
+ 
+  @media only screen and (min-width : $bp-small){
+    //font-size: 21px;
+    
+    ul{
+      border: none;
+    }
+  }
+
+  @media only screen and (min-width : $bp-medium){
+    ul{
+      padding-left: 30px;
+
+      li{
+        margin-left: 15px;
+        font-size: 1.1875em; //19px
+      }
+
+    }
+  }
+} // .nav
+
+
+
+main{
+  //padding-right: 30px;
+  
+  .proj-row{
+    
+    > .left-col{
+      @include column(3/12);
+
+      @media only screen and (min-width : $bp-medium){
+        padding-left: 30px;
+      }
+
+    }
+
+    > .right-col{
+      @include column(9/12);
+
+      @media only screen and (min-width : $bp-medium){
+        padding-right: 30px;
+      }
+
+      .left-col,
+      .right-col{
+        @include column(1/2, false);
+      }
+    }
+  }
+  
+  
+} // main
+
+
+
+/* == PROJECT ROW == */
+.proj-row{
+  @include clearfix();
+  padding-top: 20px;
+
+  header{
+    @include column(1/1);
+    margin-bottom: 15px;
+    font-size: 16px;
+
+    h2{
+      margin-bottom: 1px;
+    }
+
+    time{
+      font-size: 0.9em;
+    }
+
+    @media only screen and (min-width : $bp-small){
+      padding-left: 25%;
+
+      h2, time{
+        padding-left: 15px;
+      }
+    }
+  }
+
+  dl{
+    margin: 0em 0 1.5em;
+
+    dt{
+      margin: 10px 0 3px;;
+    }
+    dd{
+      margin-bottom: 5px;
+      line-height: 1.25;
+    }
+
+    @media only screen and (min-width : $bp-small){
+      dt:first-of-type{
+        margin-top: 0;
+      }
+    }
+  }
+
+  figure{
+    margin: 0 0 3em;
+
+    figcaption{
+      font-style: normal;
+      text-align: left;
+    }
+  }
+} // .proj-row
+
+
+
+
+
+.about-main{
+  .left-col{
+    @include column(1/3);
+  }
+  .mid-col{
+    @include column(1/3);
+  }
+  .right-col{
+    @include column(1/3);
+  }
+  
+}

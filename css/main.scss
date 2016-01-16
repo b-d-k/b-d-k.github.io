@@ -4,49 +4,47 @@
 @charset "utf-8";
 
 
+/**
+ * Concise Framework
+ * https://github.com/ConciseCSS/concise.css
+ *
+ * Copyright 2015 Concise Team
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// @import
+//   "core/globals/globals"
+// ;
 
-$spacing-unit:     30px;
+// Globals
+@import 'core/globals/globals';
+@import 'core/globals/functions';
+@import 'core/globals/mixins';
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// Custom globals
+@import 'custom/globals';
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// Natives
+@import 'core/layout/base';
+@import 'core/layout/blockquotes';
+@import 'core/layout/buttons';
+//@import 'core/layout/forms';
+@import 'core/layout/headings';
+@import 'core/layout/lists';
+//@import 'core/layout/print';
+//@import 'core/layout/tables';
+@import 'core/layout/type';
 
-// Width of the content area
-$content-width:    800px;
+// Utils
+@import 'core/utils/atgrid';
+@import 'core/utils/colors';
+@import 'core/utils/conditional-styling';
+@import 'core/utils/helpers';
 
-$on-palm:          600px;
-$on-laptop:        800px;
+// Add-Ons
+//@import 'addons/concise-ui/concise-ui';
 
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+// Custom styles
+@import 'custom/custom';

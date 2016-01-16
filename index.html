@@ -1,23 +1,46 @@
 ---
 layout: default
+slug: about
 ---
 
-<div class="home">
+<main role="main" class="about-main">
+  
+  <div class="left-col">
+    <h2>Tasks & Tools</h2>
+    <ul>
+      <li>HTML/HTML5</li>
+      <li>CSS, Less, SASS</li>
+    </ul>
+  </div>
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="mid-col">
+    <h2>Resume</h2>
+    <ul>
+      <li><a href="#">Download a</a></li>
+      <li><a href="#">Download b</a></li>
+    </ul>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="right-col">
+    <h2>Contact</h2>
+    <div class="contact vcard">
+      <a href="http://www.supergnu.com/" class="fn url">Boris Krone</a>
+      <div class="adr">
+        <span class="type hidden">Home</span>
+        <span class="locality">S. Weymouth</span>, <abbr title="Massachusetts" class="region">MA</abbr>
+        <span class="postal-code">02190</span>
+        <span class="country-name hidden">USA</span>
+      </div>
+      <div class="tel"><span class="type hidden">cell</span> +1-617-686-5926</div>
+    </div>
+  </div>
+  
+  
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+
+  
+  
+</main>

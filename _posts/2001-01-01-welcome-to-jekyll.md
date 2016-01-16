@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2015-08-26 16:44:56
+date:   2001-01-01 16:44:56
 categories: jekyll update
 ---
 
@@ -24,3 +24,13 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help
+
+An image:
+
+![cat.png]({{site.baseurl}}/images/hk-sm-1.png)
+
+<!---
+Comment #1 with three opening dashes. You cannot see me.
+-->
+
+[comment]: <> (Comment #2. You cannot see me either.)

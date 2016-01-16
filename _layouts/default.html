@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body>
+{% include head.html %}
+<body id="{{page.slug}}">
+  <div class="page-wrapper">
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+      {{ content }}
 
-    {% include footer.html %}
-
-  </body>
-
+  </div><!-- page-wrapper -->
+  
+  <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
+</body>
 </html>
