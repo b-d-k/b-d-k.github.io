@@ -7,15 +7,35 @@ h1, h2, h3{
   margin-top: 0;
 }
 
-
+/* == General, Re-usable == */
 .img-shadow{
   box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
 }
 
+nav{
+  @include clearfix();
+  
+  ul{
+    list-style-type: none;
 
+    li{
+      float: left;
+    }
+  }
+}
+
+
+
+
+/* == Site ==*/
 body{
   //background-color: #c4c4c4;
-  background-color: lighten( #c4c4c4, 15% )
+  background-color: lighten( #c4c4c4, 15% );
+
+  // -- test: red border extra small --
+  @media only screen and (min-width : $bp-extra-small){
+    border-top: 1px solid red;
+  }
 }
 
 
@@ -81,8 +101,7 @@ body{
 }
 
 
-nav{
-  @include clearfix();
+.site-nav{
   margin-bottom: 20px;
   padding-top: 25px;
   display: block;
@@ -91,12 +110,10 @@ nav{
   ul{
     @include column(1/1);
     padding-bottom: 3px;
-    list-style-type: none;
     border-bottom: 2px solid #ddd;
 
     li{
       margin-left: 10px;
-      float: left;
       font-family: "Open Sans", "Arial", sans-serif;
       font-size: 1.125em; //18px
 
@@ -164,14 +181,28 @@ main{
     > .right-col{
       @include column(9/12);
 
+      
+      @media only screen and (min-width : $bp-extra-small){
+        // -- nested columns --
+        .left-col,
+        .right-col{
+          @include column(1/2, false);
+          width: 50%;
+        }
+        .left-col{
+          padding-right: 8px;
+        }
+        .right-col{
+          padding-left: 8px;
+        }
+      }
+
       @media only screen and (min-width : $bp-medium){
         padding-right: 30px;
       }
 
-      .left-col,
-      .right-col{
-        @include column(1/2, false);
-      }
+
+
     }
   }
   
