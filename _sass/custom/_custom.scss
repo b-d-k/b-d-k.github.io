@@ -26,34 +26,62 @@ nav{
 }
 
 .pagination{
-  font-size: 1.063em;
+  font-family: "Open Sans", "Arial", sans-serif;
+  //font-size: 1.063em;
+  font-weight: 700;
 
   ul{
+    @include clearfix();
+    padding: 0;
+
     li{
       margin-left: 9px;
-      padding: 4px 6px;
-      line-height: 1;
-      //background-color: #dfdfdf;
+      //padding: 7px 11px;
+      line-height: 34px;
       
+            
       &:first-child{
         margin-left: 0;
       }
+      // all 1st containers inside li
+      > :first-child{
+        width: 36px;
+        height: 36px;
+        //padding: 7px 11px;
+        display: inline-block;
+        text-align: center;
+        //border: 1px solid #ddd;
+        border-radius: 20px;
+      }
+
+      // previous/next item
+      &.pn{
+        > :first-child{
+          line-height: 36px;
+          border: none;
+        }
+      }
       
-      // -- no next/prev --
+      // -- no next/prev link --
       s{
         color: #c4c4c4;
       }
+      
       // -- current page --
       &.active{
         em{
+          //padding: 7px 11px;
           font-style: normal;
-          font-weight: 700;
         }
         
       }
       // -- all pagination links --
       a{
-        //color: #
+        //padding: 7px 11px;
+
+        &:hover{
+          background-color: #f2f2f2;
+        }
       }
     } // li
 
@@ -70,8 +98,15 @@ body{
 
   // -- test: red border extra small --
   @media only screen and (min-width : $bp-extra-small){
+    border-top: 1px solid blue;
+  }
+  @media only screen and (min-width : $bp-small){
+    border-top: 1px solid green;
+  }
+  @media only screen and (min-width : $bp-medium){
     border-top: 1px solid red;
   }
+
 }
 
 
@@ -244,9 +279,18 @@ main{
     }
   }
   
-  // -- Pagination placement --
+  // -- Pagination placement & other specifics --
   .pagination{
+    @include column(1/1);
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 10px;
     
+
+    @media only screen and (min-width : $bp-small){
+      @include column(3/4);
+      margin-left: 25%;
+    }
   }
   
 } // main
