@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.2.3
+install:
+- "./bin/setup"
+script:
+- bundle exec jekyll build --trace
+- bundle exec htmlproof ./_site --only-4xx
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && "./bin/automated"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - USERNAME: b-d-k
+  - EMAIL: mail@supergnu.com
+  - secure: mZNBoaXwwL/9gaJiLKY8J88ifH8RR/ocJGQsWHxUPaGN75dOYtxcP3+yVlIX2ic6tHk7BexN6maMO12NsaiH4p+WtrNHX5NoXX8iHrNODYy17Zez96SSNjkpGFmYaeWnKlrJo5CPEJJlrBqqSbwd9qd4mCmH+bxubADrvyi9OKg3zt3t5Olp/nPfKnZ0vS7n84lQu5VVpIgQcmfSE5IaJUqJ18TEwnLtbUFdzl/uSz7yJapUkPHkCh9wEWyf1aHdHSCRfhSAcfqX4ix6tuiudgPSm9l7T0IkXsNI19Me7OGcZBkMQPgISZmCOVWTJOhGdSUQODlK2cPOOC86OjvgY036jVDFnw6J5OxdvDOTnjvj64eCzUM7hP78Dqi4lURgb3hHXQ+7r4LqZ8KWTeEeMfSkYNJUGN/4iF0Syak0PssIW50T9qmlR1XnL1/NTNNRgH8pdcskw4YLmF8Lrl8y3rMyz0mXO2Sn+cC2R4g3NjBA+tGUML8QbS6LhplTnvqrXj3ISbEZPhPvmuTR3KdfPra9WNAOPYAzaN4yGU1S8RDls1yir93+sPEuYqbj979CwoJqN1l009mJiP1GDrBj5eSFg6tNAF4jydF1KXdsZHxos48RaRfA1hsGVpGq1ztq/0irS6648qk1ly17uOyof5qdUzvdZCXV0L/+oFEKu0I=
