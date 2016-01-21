@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'moon-icons';
     src:
-        url('/fonts/moon-icons.ttf?grlcxn') format('truetype'),
-        url('/fonts/moon-icons.woff?grlcxn') format('woff'),
-        url('/fonts/moon-icons.svg?grlcxn#moon-icons') format('svg');
+        url('/fonts/moon-icons.ttf?xht67s') format('truetype'),
+        url('/fonts/moon-icons.woff?xht67s') format('woff'),
+        url('/fonts/moon-icons.svg?xht67s#moon-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,6 +23,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+    content: "\e900";
+}
 .icon-star:before {
     content: "\f005";
 }
@@ -62,8 +65,11 @@
 .icon-trash:before {
     content: "\f1f8";
 }
-.icon-playback-rewind:before {
-    content: "\e603";
+.icon-help-with-circle:before {
+    content: "\e602";
+}
+.icon-mail:before {
+    content: "\e607";
 }
 .icon-cog:before {
     content: "\e605";
@@ -103,11 +109,5 @@
 }
 .icon-twitter:before {
     content: "\ea91";
-}
-.icon-help-with-circle:before {
-    content: "\e602";
-}
-.icon-mail:before {
-    content: "\e607";
 }
 
