@@ -10,15 +10,13 @@ slug: portfolio
   {% endfor %}
 
 
-
-
   {% if paginator.total_pages > 1 %}
   <nav class="pagination">
     <ul>
       {% if paginator.previous_page %}
         <li class="pn"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev icon-chevron-left" class="icon-chevron-left"><span class="screenreader">Previous page</span> </a></li>
       {% else %}
-        <li class="pn inactive"><s class="icon-chevron-left"><span class="screenreader">No previous page</span>&laquo;</s></li>
+        <li class="pn inactive"><s class="icon-chevron-left"><span class="screenreader">No previous page</span> </s></li>
       {% endif %}
       
       {% for page in (1..paginator.total_pages) %}

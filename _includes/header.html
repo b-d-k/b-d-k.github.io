@@ -9,8 +9,7 @@
     </li>
     {% for page in site.pages %}
       {% if page.title %}
-        {% if page.url contains '/page' %}
-        {% else %}
+        {% if page.url contains '/page' %}{% else %}
   			<li class="{{page.slug}}">
           <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
   			</li>
