@@ -1,0 +1,9 @@
+BEGIN:VCARD
+N:Krone;Boris;;;Mr
+FN:Boris Krone
+ADR;INTL;PARCEL;WORK:;;;Weymouth;MA;02190;USA
+EMAIL;INTERNET:mail@supergnu.com
+TEL;WORK:+1 617-686-5926
+TITLE:UI Developer
+URL;WORK:www.supergnu.com
+END:VCARD
