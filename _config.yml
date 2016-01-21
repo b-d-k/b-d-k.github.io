@@ -19,7 +19,7 @@ excerpt_separator: <!--more-->
 # Build settings
 markdown: kramdown
 
-exclude: ["Gemfile","Gemfile.lock", "README.md", "deploy"]
+exclude: ["Gemfile","Gemfile.lock", "README.md", "deploy", ".travis.yml", "bin"]
 
 
   

@@ -89,18 +89,15 @@ body{
   background-color: lighten( #c4c4c4, 15% );
 
   // -- test: borders --
-  
-  @media only screen and (min-width : $bp-extra-small){
-    border-top: 1px solid blue;
-  }
-  @media only screen and (min-width : $bp-small){
-    border-top: 1px solid green;
-  }
-  @media only screen and (min-width : $bp-medium){
-    border-top: 1px solid red;
-  }
-  
-
+  // @media only screen and (min-width : $bp-extra-small){
+  //   border-top: 1px solid blue;
+  // }
+  // @media only screen and (min-width : $bp-small){
+  //   border-top: 1px solid green;
+  // }
+  // @media only screen and (min-width : $bp-medium){
+  //   border-top: 1px solid red;
+  // }
 }
 
 
