@@ -196,7 +196,9 @@ body{
       }
 
       a{
-        color: lighten(getColor(text, primary), 10%);
+        //color: lighten(getColor(text, primary), 10%);
+        font-weight: 800;
+        color: #c7c7c7;
 
         &:hover{
           color: #eb7d12;
